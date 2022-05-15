@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.header{
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.vector{
+    flex: 0 1 auto;
+    align-self: auto;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+.body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.footer{
+    margin-top: auto;
+    background-color: grey;
+    align-self: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+}
+.botones{
+
+}
