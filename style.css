@@ -1,41 +1,108 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.header{
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
+.contenedor {
+  background-color: #eadede;
+  height: auto;
+  width: 100%;
+  padding-top: 2em;
+  padding-left: 2em;
+  display: flex;
+  flex-flow: column;
 }
-.vector{
-    flex: 0 1 auto;
-    align-self: auto;
-    margin-top: 2em;
-    margin-left: 2em;
-}
-.body{
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-.footer{
-    margin-top: auto;
-    background-color: grey;
-    align-self: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: center;
-}
-.botones{
 
+.header {
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.vector {
+  flex: 0 1 auto;
+  align-self: auto;
+}
+.main_menu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 760px;
+}
+.footer {
+  border: solid 4px #f58840;
+  background-color: #000000;
+  font-size: large;
+  border-radius: 2em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  height: 100px;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+}
+#btnIniciar {
+  margin-bottom: 2em;
+  font-size: larger;
+  font-family: "Roboto", sans-serif;
+  background-color: #000000;
+  border: solid 4px #f58840;
+  border-radius: 2em;
+  width: 17%;
+  height: 15%;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+}
+.botones {
+  font-family: "Roboto", sans-serif;
+  background-color: #000000;
+  border: solid 4px #f58840;
+  border-radius: 1.5em;
+  width: 15%;
+  height: 10%;
+  -webkit-border-radius: 1.5em;
+  -moz-border-radius: 1.5em;
+  -ms-border-radius: 1.5em;
+  -o-border-radius: 1.5em;
+}
+a { 
+   
+  font-family: "Roboto", sans-serif;
+  color: #f58840;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+.botones:hover,
+#btnIniciar:hover,
+.footer:hover {
+  background-color: bisque;
+}
+p {
+  color: #f58840;
+}
+.game_screen {
+    display: flex;
+    width: 100%;
+  height: 760px;
+}
+.ap_screen{
+    display: flex;
+    width: 100%;
+  height: 760px;
 }
