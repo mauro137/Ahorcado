@@ -4,13 +4,15 @@
   box-sizing: border-box;
 }
 .contenedor {
-  background-color: #eadede;
+  background-color: hsl(213, 19%, 18%);
   height: auto;
   width: 100%;
   padding-top: 2em;
   padding-left: 2em;
   display: flex;
   flex-flow: column;
+  justify-content: center;
+ 
 }
 
 .header {
@@ -33,9 +35,10 @@
   height: 760px;
 }
 .footer {
-  border: solid 4px #f58840;
-  background-color: #000000;
-  font-size: large;
+  
+  border: none;
+  background-color: #d8e3e7;
+  font-size: 1.5em;
   border-radius: 2em;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -50,12 +53,12 @@
   -ms-border-radius: 2em;
   -o-border-radius: 2em;
 }
-#btnIniciar {
+#iniciarJuego {
   margin-bottom: 2em;
   font-size: larger;
   font-family: "Roboto", sans-serif;
-  background-color: #000000;
-  border: solid 4px #f58840;
+  background-color: #d8e3e7;
+  border: none;
   border-radius: 2em;
   width: 17%;
   height: 15%;
@@ -64,10 +67,15 @@
   -ms-border-radius: 2em;
   -o-border-radius: 2em;
 }
-.botones {
-  font-family: "Roboto", sans-serif;
-  background-color: #000000;
-  border: solid 4px #f58840;
+
+a { 
+  margin-top: 2em;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #d8e3e7;
+  border: none;
   border-radius: 1.5em;
   width: 15%;
   height: 10%;
@@ -75,12 +83,9 @@
   -moz-border-radius: 1.5em;
   -ms-border-radius: 1.5em;
   -o-border-radius: 1.5em;
-}
-a { 
-   
   font-family: "Roboto", sans-serif;
-  color: #f58840;
-  font-weight: bolder;
+  color: black;
+  font-weight: bold;
   letter-spacing: 0.1em;
 }
 a:link,
@@ -88,13 +93,14 @@ a:visited,
 a:active {
   text-decoration: none;
 }
-.botones:hover,
+a:hover,
 #btnIniciar:hover,
 .footer:hover {
-  background-color: bisque;
+  background-color: hsl(25, 97%, 53%);
+  cursor: pointer;
 }
 p {
-  color: #f58840;
+  color: black;
 }
 .game_screen {
     display: flex;
@@ -105,4 +111,18 @@ p {
     display: flex;
     width: 100%;
   height: 760px;
+  justify-content: center;
+  
+}
+.contenedor_botones{
+  margin-bottom: 3em;
+  height: auto;
+   width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+.contenedor_botones a {
+  margin-right: 2em;
 }
