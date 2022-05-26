@@ -47,6 +47,7 @@ function buscarCoincidencia(teclaPresionada) {
       console.log(maskedPalabra);
       maskedPalabra.splice(index, 1, teclaPresionada);
       console.log(maskedPalabra);
+      document.querySelector(".palabra").innerHTML = maskedPalabra.join(" ");
       aciertos--;
     } else {
     }
