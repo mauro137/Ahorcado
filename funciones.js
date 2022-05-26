@@ -9,21 +9,12 @@ let aciertos = arrayChars.length;
 
 document.querySelector(".palabra").innerHTML = maskedPalabra.join(" ");
 document.addEventListener("keypress", main);
-
-
-
-function main(event,charValido) {
+console.log(palabra);
+function main(event) {
   const teclaPresionada = event.key.toUpperCase();
   validarLetra(teclaPresionada);
-  if (charValido) {
-    buscarCoincidencia(teclaPresionada);
-    console.log("valido")
-    /* checkIntentos(intentos,aciertos); */
-  } else {
-    console.log("invalido")
-  }
 }
-function validarLetra  (teclaPresionada) {
+const validarLetra = (teclaPresionada) => {
   let charValido = true;
   try {
     if (teclaPresionada.match(/^[0-9]*$/)) {
@@ -39,31 +30,36 @@ function validarLetra  (teclaPresionada) {
     alert(error);
     charValido = false;
   }
-  return charValido;
+
+  console.log(charValido);
+  if (charValido) {
+    buscarCoincidencia(teclaPresionada);
+  } else {
+  }
 };
 
-function buscarCoincidencia (teclaPresionada) {
+function buscarCoincidencia(teclaPresionada) {
   letrasUsadas.push(teclaPresionada);
   for (let index = 0; index < arrayChars.length; index++) {
     const letra = arrayChars[index];
     if (letra === teclaPresionada) {
-      console.log('acertaste')
-      maskedPalabra.splice(index,1,teclaPresionada)
+      console.log("acertaste");
+      console.log(maskedPalabra);
+      maskedPalabra.splice(index, 1, teclaPresionada);
+      console.log(maskedPalabra);
       aciertos--;
-      
     } else {
-      intentos--;
-      console.log('fallaste')
     }
   }
-};
-
-const checkIntentos = (intentos,aciertos) =>{
-  if (condition) {
-    
+  if (palabra.includes(teclaPresionada) != true) {
+    intentos--;
+    console.log("fallaste");
   }
-/*  */
-  /* deshabilitar evento al finalizar juego*/
 }
 
-
+const checkIntentos = (intentos, aciertos) => {
+  if (condition) {
+  }
+  /*  */
+  /* deshabilitar evento al finalizar juego*/
+};
