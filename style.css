@@ -14,7 +14,6 @@
   justify-content: center;
  
 }
-
 .header {
   height: auto;
   display: flex;
@@ -35,7 +34,6 @@
   height: 760px;
 }
 .footer {
-  
   border: none;
   background-color: #d8e3e7;
   font-size: 1.5em;
@@ -77,8 +75,8 @@ a {
   background-color: #d8e3e7;
   border: none;
   border-radius: 1.5em;
-  width: 15%;
-  height: 10%;
+  width: 20em;
+  height: 4em;
   -webkit-border-radius: 1.5em;
   -moz-border-radius: 1.5em;
   -ms-border-radius: 1.5em;
@@ -103,8 +101,12 @@ p {
   color: black;
 }
 .game_screen {
-    display: flex;
-    width: 100%;
+  
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
   height: 760px;
 }
 .ap_screen{
@@ -115,14 +117,31 @@ p {
   
 }
 .contenedor_botones{
+  display: inline-flex;
   margin-bottom: 3em;
   height: auto;
-   width: 100%;
-  display: inline-flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-end;
 }
 .contenedor_botones a {
   margin-right: 2em;
+}
+.palabra{
+  word-spacing: 1.5em;
+  border-radius: 2em;
+  font-family: "Roboto", sans-serif;
+  background-color: #d8e3e7;
+  font-weight: bold;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: auto;
+  width: 20em;
+  height: 7%;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
 }
