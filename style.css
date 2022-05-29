@@ -12,7 +12,6 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
- 
 }
 .header {
   height: auto;
@@ -66,7 +65,7 @@
   -o-border-radius: 2em;
 }
 
-a { 
+a {
   margin-top: 2em;
   display: inline-flex;
   align-items: center;
@@ -101,33 +100,33 @@ p {
   color: black;
 }
 .game_screen {
-  
-    display: inline-flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    align-items: center;
-    align-content: center;
+  display: inline-flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
   height: 760px;
 }
-.ap_screen{
-    display: flex;
-    width: 100%;
+.ap_screen {
+  display: flex;
+  width: 100%;
   height: 760px;
   justify-content: center;
-  
 }
-.contenedor_botones{
+.contenedor_botones {
   display: inline-flex;
   margin-bottom: 3em;
   height: auto;
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-end;
+  margin-bottom: 1em;
 }
 .contenedor_botones a {
   margin-right: 2em;
 }
-.palabra{
+.palabra {
+  margin-bottom: 2em;
   word-spacing: 1.5em;
   border-radius: 2em;
   font-family: "Roboto", sans-serif;
@@ -144,4 +143,31 @@ p {
   -moz-border-radius: 2em;
   -ms-border-radius: 2em;
   -o-border-radius: 2em;
+}
+.letras_usadas {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  align-self: auto;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #d8e3e7;
+  font-weight: bold;
+  width: 20em;
+  height: 5%;
+}
+
+.letras_usadas:hover,
+.palabra:hover {
+  background-color: hsl(25, 97%, 53%);
+}
+.munieco_box{
+  margin-bottom: 2em;
+  display: flex;
+  align-self: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8e3e7;
+  height: 50%;
+  width: 20em;
 }

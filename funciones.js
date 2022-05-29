@@ -1,18 +1,22 @@
 const listaPalabras = ["ARREGLO", "RED", "DATOS", "EDITOR", "BUG", "EVENTO"];
 const letrasUsadas = [];
+const munieco = [];
+let letraUsada = letrasUsadas.join("-")
 n = Math.floor(Math.random() * listaPalabras.length);
 let palabra = listaPalabras[n];
 let arrayChars = palabra.split("");
 let maskedPalabra = palabra.replace(/[A-Z]/g, "_").split("");
-let intentos = 7;
+let intentos = 6;
 let aciertos = arrayChars.length;
 
 document.querySelector(".palabra").innerHTML = maskedPalabra.join(" ");
 document.addEventListener("keypress", main);
 console.log(palabra);
+
 function main(event) {
   const teclaPresionada = event.key.toUpperCase();
   validarLetra(teclaPresionada);
+  checkIntentos();
 }
 const validarLetra = (teclaPresionada) => {
   let charValido = true;
@@ -30,23 +34,19 @@ const validarLetra = (teclaPresionada) => {
     alert(error);
     charValido = false;
   }
-
-  console.log(charValido);
+ 
   if (charValido) {
     buscarCoincidencia(teclaPresionada);
   } else {
   }
 };
-
 function buscarCoincidencia(teclaPresionada) {
   letrasUsadas.push(teclaPresionada);
+  document.querySelector(".letras_usadas").innerHTML = letrasUsadas.join(" - ");
   for (let index = 0; index < arrayChars.length; index++) {
     const letra = arrayChars[index];
     if (letra === teclaPresionada) {
-      console.log("acertaste");
-      console.log(maskedPalabra);
       maskedPalabra.splice(index, 1, teclaPresionada);
-      console.log(maskedPalabra);
       document.querySelector(".palabra").innerHTML = maskedPalabra.join(" ");
       aciertos--;
     } else {
@@ -56,11 +56,17 @@ function buscarCoincidencia(teclaPresionada) {
     intentos--;
     console.log("fallaste");
   }
+  
 }
-
-const checkIntentos = (intentos, aciertos) => {
-  if (condition) {
+const checkIntentos = () => {
+  if (intentos == 0) {
+    console.log('perdiste')
+    document.removeEventListener("keypress", main);
   }
-  /*  */
-  /* deshabilitar evento al finalizar juego*/
+  if (aciertos== 0) {
+    console.log('ganaste')
+    document.removeEventListener("keypress", main);
+  } else {
+    console.log("seguis jugando")
+  }
 };
