@@ -18,11 +18,15 @@
   <body>
     <div class="contenedor">
       <my-header></my-header>
-      
       <section class="ap_screen">
-     
+        <div class="neword_box"> 
+         
+         <form id="form" method="get" action="/game.html">
+       <input type="text" name="new_word" id="new_word"  minlength="2" maxlength="8" autocomplete="off" pattern="[a-zA-Z]{2,8}" title="min 2,max 8 chars. no se permite repetir palabras" >
+      </form >
+      </div>
         <div class="contenedor_botones"> 
-          <a href="index.html"> Guardar y Empezar</a>
+          <input type="submit" value="Guardar y Empezar" id="submit" form="form" name="submit" >  
           <a href="index.html">Cancelar</a>
         </div>
       </section>

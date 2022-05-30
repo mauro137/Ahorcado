@@ -1,7 +1,14 @@
 const listaPalabras = ["ARREGLO", "RED", "DATOS", "EDITOR", "BUG", "EVENTO"];
 const letrasUsadas = [];
-const munieco = [];
-let letraUsada = letrasUsadas.join("-")
+let munieco = [
+  "<img src='/imagenes/munieco/munieco_parte6_final.png'>",
+  "<img src='/imagenes/munieco/munieco_parte5.png'>",
+  "<img src='/imagenes/munieco/munieco_parte4.png'>",
+  "<img src='/imagenes/munieco/munieco_parte3.png'>",
+  "<img src='/imagenes/munieco/munieco_parte2.png'>",
+  "<img src='/imagenes/munieco/munieco_parte1.png'>",
+];
+let letraUsada = letrasUsadas.join("-");
 n = Math.floor(Math.random() * listaPalabras.length);
 let palabra = listaPalabras[n];
 let arrayChars = palabra.split("");
@@ -11,6 +18,7 @@ let aciertos = arrayChars.length;
 
 document.querySelector(".palabra").innerHTML = maskedPalabra.join(" ");
 document.addEventListener("keypress", main);
+
 console.log(palabra);
 
 function main(event) {
@@ -34,7 +42,7 @@ const validarLetra = (teclaPresionada) => {
     alert(error);
     charValido = false;
   }
- 
+
   if (charValido) {
     buscarCoincidencia(teclaPresionada);
   } else {
@@ -54,19 +62,18 @@ function buscarCoincidencia(teclaPresionada) {
   }
   if (palabra.includes(teclaPresionada) != true) {
     intentos--;
+    document.querySelector(".munieco_box").innerHTML = munieco[intentos];
     console.log("fallaste");
   }
-  
 }
 const checkIntentos = () => {
   if (intentos == 0) {
-    console.log('perdiste')
+    console.log("perdiste");
     document.removeEventListener("keypress", main);
   }
-  if (aciertos== 0) {
-    console.log('ganaste')
+  if (aciertos == 0) {
+    console.log("ganaste");
     document.removeEventListener("keypress", main);
   } else {
-    console.log("seguis jugando")
   }
 };

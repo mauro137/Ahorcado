@@ -65,7 +65,8 @@
   -o-border-radius: 2em;
 }
 
-a {
+a,
+#submit {
   margin-top: 2em;
   display: inline-flex;
   align-items: center;
@@ -84,6 +85,7 @@ a {
   color: black;
   font-weight: bold;
   letter-spacing: 0.1em;
+  margin-right: 2em;
 }
 a:link,
 a:visited,
@@ -92,7 +94,8 @@ a:active {
 }
 a:hover,
 #btnIniciar:hover,
-.footer:hover {
+.footer:hover,
+#submit:hover {
   background-color: hsl(25, 97%, 53%);
   cursor: pointer;
 }
@@ -111,7 +114,9 @@ p {
   display: flex;
   width: 100%;
   height: 760px;
-  justify-content: center;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
 }
 .contenedor_botones {
   display: inline-flex;
@@ -121,9 +126,12 @@ p {
   justify-content: center;
   align-items: flex-end;
   margin-bottom: 1em;
+  align-self: auto;
 }
 .contenedor_botones a {
   margin-right: 2em;
+  display: inline-flex;
+  flex-flow: row wrap;
 }
 .palabra {
   margin-bottom: 2em;
@@ -158,16 +166,52 @@ p {
 }
 
 .letras_usadas:hover,
-.palabra:hover {
+.palabra:hover,
+.munieco_box:hover,
+#submit:hover {
   background-color: hsl(25, 97%, 53%);
 }
-.munieco_box{
+.munieco_box {
   margin-bottom: 2em;
   display: flex;
+  flex-flow: column wrap;
   align-self: auto;
   align-items: center;
   justify-content: center;
   background-color: #d8e3e7;
   height: 50%;
   width: 20em;
+}
+.neword_box {
+  display: flex;
+  width: 30rem;
+  height: 30rem;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #d8e3e7;
+}
+#new_word {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+  display: flex;
+  align-self: auto;
+  margin-top: 10rem;
+  background-color: #d8e3e7;
+  border: 0;
+  outline: 0;
+  border-bottom: 3px solid black;
+  width: 50%;
+}
+#form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 75%;
 }
