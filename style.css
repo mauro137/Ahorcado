@@ -215,3 +215,22 @@ p {
 img {
   height: 75%;
 }
+#msg_ganador {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  width: auto;
+  height: auto;
+  font-size: 2rem;
+  color: yellowgreen;
+  display: none;
+}
+
+#msg_perdedor {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  width: auto;
+  height: auto;
+  font-size: 2rem;
+  color: red;
+  display: none;
+}

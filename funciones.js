@@ -68,11 +68,11 @@ function buscarCoincidencia(teclaPresionada) {
 }
 const checkIntentos = () => {
   if (intentos == 0) {
-    console.log("perdiste");
+    document.getElementById("msg_perdedor").style.display = "block";
     document.removeEventListener("keypress", main);
   }
   if (aciertos == 0) {
-    console.log("ganaste");
+    document.getElementById("msg_ganador").style.display = "block";
     document.removeEventListener("keypress", main);
   } else {
   }
