@@ -13,24 +13,25 @@
       rel="stylesheet"
     />
     <script type="module" src="main.js"></script>
+    <script type="module" src="globales.js"> </script>
     <title>Ahoracado - Game Screen</title>
   </head>
   <body class="body">
     <div class="contenedor">
       <my-header></my-header>
       <section class="game_screen">
-        <div id="msg_perdedor"> <span>FIN DEL JUEGO</span></div>
-        <div id="msg_ganador"> <span>GANASTE,FELICIDADES</span></div>
+        <div id="msg_perdedor"><span>FIN DEL JUEGO</span></div>
+        <div id="msg_ganador"><span>GANASTE,FELICIDADES</span></div>
         <div class="munieco_box"></div>
         <div class="palabra"></div>
         <div class="letras_usadas"></div>
         <div class="contenedor_botones">
-          <a href="game.html">Nuevo Juego</a>
-          <a href="index.html"> Desistir</a>
+          <a href="game.html">NUEVO JUEGO</a>
+          <a href="index.html"> DESISTIR</a>
         </div>
       </section>
       <my-footer> </my-footer>
     </div>
   </body>
-  <script src="funciones.js"></script>
+  <script src="funciones.js" type="module"></script>
 </html>

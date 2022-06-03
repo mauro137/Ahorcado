@@ -64,9 +64,8 @@
   -ms-border-radius: 2em;
   -o-border-radius: 2em;
 }
-
 a,
-#submit {
+#enviar {
   margin-top: 2em;
   display: inline-flex;
   align-items: center;
@@ -94,8 +93,7 @@ a:active {
 }
 a:hover,
 #btnIniciar:hover,
-.footer:hover,
-#submit:hover {
+#enviar:hover {
   background-color: hsl(25, 97%, 53%);
   cursor: pointer;
 }
