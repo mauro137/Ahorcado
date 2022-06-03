@@ -1,12 +1,12 @@
 import { listaPalabras } from "./globales.js";
 const letrasUsadas = [];
 let munieco = [
-  "<img src='/imagenes/munieco/munieco_parte6_final.png'>",
-  "<img src='/imagenes/munieco/munieco_parte5.png'>",
-  "<img src='/imagenes/munieco/munieco_parte4.png'>",
-  "<img src='/imagenes/munieco/munieco_parte3.png'>",             
-  "<img src='/imagenes/munieco/munieco_parte2.png'>",
-  "<img src='/imagenes/munieco/munieco_parte1.png'>",    
+  "<img src='imagenes/munieco/munieco_parte6_final.png'>",
+  "<img src='imagenes/munieco/munieco_parte5.png'>",
+  "<img src='imagenes/munieco/munieco_parte4.png'>",
+  "<img src='imagenes/munieco/munieco_parte3.png'>",             
+  "<img src='imagenes/munieco/munieco_parte2.png'>",
+  "<img src='imagenes/munieco/munieco_parte1.png'>",    
 ];
 let letraUsada = letrasUsadas.join("-");
 var n = Math.floor(Math.random() * listaPalabras.length);
